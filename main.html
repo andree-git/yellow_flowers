@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Para Angui 🌼</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#fffaf0 0%,#fffefb 50%);
+      --accent: #f6c84c; /* amarillo suave */
+      --muted: #7b7280;
+      --card: rgba(255,255,255,0.7);
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,Arial; background:var(--bg); color:#222; -webkit-font-smoothing:antialiased;
+    }
+    .container{max-width:960px;margin:36px auto;padding:28px}
+
+    header{display:flex;gap:18px;align-items:center}
+    .logo{width:76px;height:76px;border-radius:18px;background:linear-gradient(180deg,var(--accent),#ffd874);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(246,200,76,0.25);}
+    .logo img{width:100%;height:100%;opacity:0.95;border-radius:18px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    main{margin-top:22px;display:grid;grid-template-columns:1fr 340px;gap:20px}
+    .card{background:var(--card);backdrop-filter: blur(6px);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+    .hero{padding:28px;border-radius:12px;display:flex;gap:18px;align-items:center}
+    .photo{width:160px;height:160px;border-radius:12px;flex:0 0 160px;background:linear-gradient(180deg,#fff,#fff0);display:flex;align-items:center;justify-content:center;border:6px solid rgba(255,255,255,0.7)}
+    .photo img{width:100%;height:200%;object-fit:cover;border-radius:8px}
+
+    .message{flex:1}
+    .message h2{margin:0;font-size:20px}
+    .message p{margin:10px 0 0;line-height:1.5;color:#333}
+
+    .flowers{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .flower{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(246,200,76,0.12);font-weight:600;color:#a45a00}
+
+    .right{position:sticky;top:24px}
+    .meta{display:flex;flex-direction:column;gap:10px}
+    .small{font-size:13px;color:var(--muted)}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+
+    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* botón bonito */
+    .btn{display:inline-block;padding:10px 14px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#ffd874);box-shadow:0 8px 18px rgba(246,200,76,0.22);text-decoration:none;color:#3a2300;font-weight:700}
+
+    /* animación sutil */
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .logo{animation:floaty 4s ease-in-out infinite}
+
+    /* responsive */
+    @media(max-width:880px){main{grid-template-columns:1fr} .right{position:static}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" aria-hidden>
+        <!-- ícono de flor simple -->
+        <img src="Beach.jpg" alt="Foto">
+      </div>
+      <div>
+        <h1>Para Angui 🌼</h1>
+        <p class="lead">Un regalo para la chica que mas quise.</p>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card hero">
+          <div class="photo">
+            <!-- Sustituye el src por la foto que quieras, si no hay imagen se mostrará un icono -->
+            <img src="Picachu.jpg" alt="Foto para Angui" onerror="this.style.opacity=0.6" />
+          </div>
+          <div class="message">
+            <h2>Hola Angui,</h2>
+            <p id="main-text">Te prometi un regalo para el dia 21 de septiembre y aqui esta mi pequeño regalo con los recuerdos de estos años que estuvimos juntos y ounque ya no lo estamos aprecie mucho ese tiempo que pasamos juntos los paseos por el open cuando te acompañaba a tomar tu combi despues de la uni y el osito que me regalaste que me encanto mucho y lo guardo como si fuera oro.</p>
+            <div class="flowers" aria-hidden>
+              <span class="flower">🌼 Estudia para que cumplas tus sueños</span>
+            </div>
+            <div style="margin-top:12px">
+              <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5UkgRB73jKgle0X2XzK3Pe?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3 style="margin-top:0">Pequeños recuerdos</h3>
+          <p class="small">Agrega aquí frases, fotos y notas. Todo lo que compartieron puede ir en esta sección.</p>
+          <div class="gallery" id="gallery">
+            <!-- Imágenes de ejemplo; cambia las src por tus fotos -->
+            <img src="two.jpg" alt="recuerdo 1">
+            <img src="hear.jpg" alt="recuerdo 2">
+            <img src="hair.jpg" alt="recuerdo 3">
+          </div>
+        </div>
+      </section>
+
+      <aside class="right">
+        <div class="card meta">
+          <div>
+            <div class="small">Fecha</div>
+            <div style="font-weight:700">21 de septiembre de 2025</div>
+          </div>
+
+          <div>
+            <div class="small">Hecho por</div>
+            <div style="font-weight:700"> Tu ex niño</div>
+          </div>
+
+          <div>
+            <div class="small"></div>
+            <div id="shortMsg">Nunca quise verte llorar.</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4 style="margin:0 0 8px 0">Deseo</h4>
+          <p class="small" style="text-align: center;" >No se si este sea mi ultimo regalo o la ultima conversacion que tengamos pero deseo que llegues a cumplir todas tus metas, termines tu carrera y seas la mejor arquitecta del mundo y ya no te estreses con cualquier proyecto que te propongas. <br>This crazy boy falls in love with a girl he swore to protect but ended up hurting her.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>A crazy love.</small>
+    </footer>
+  </div>
+
+
+</body>
+</html>
